@@ -18,8 +18,8 @@ The elements container project has had it's `angular.json` file modified to incl
 	- Add the following code to the AppModule class
 
 <pre><code>constructor(injector: Injector) {
-  const  announcementComponent = createCustomElement(AnnouncementComponent, {injector});
-  customElements.define('app-announcement', announcementComponent);
+  const  announcementComponent = createCustomElement(YOUR_COMPONENT, {injector});
+  customElements.define('app-PROJECT_NAME', YOUR_COMPONENT);
 }
 
 ngDoBootstrap() { }</code></pre>
@@ -52,7 +52,7 @@ not IE 9-11 # For IE 9-11 support, remove 'not'.</code></pre>
   dist/PROJECT_NAME/main.js \
   dist/PROJECT_NAME/runtime.js \
   dist/PROJECT_NAME/polyfills.js \
-  > dist/agi-PROJECT_NAME.js
+  > dist/app-PROJECT_NAME.js
 </code></pre>
 8. Finally, update the `package.json` file's build script to the following `ng build --prod --output-hashing=none && sh concat-build.sh`
 
