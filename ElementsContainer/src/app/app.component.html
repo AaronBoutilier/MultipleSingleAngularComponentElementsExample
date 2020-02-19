@@ -1,0 +1,5 @@
+<h1>Elements Container App!</h1>
+Enter announcement Text: <input [(ngModel)]="announcementText" type="text"> <br>
+Text Colour: <app-colour-picker (selectedColourChanged)="onSelectedTextColourChanged($event)" [defaultColour]="textColour"></app-colour-picker> <br>
+Background Colour: <app-colour-picker (selectedColourChanged)="onSelectedBackgroundColourChanged($event)" [defaultColour]="backgroundColour"></app-colour-picker> <br> <br>
+<app-announcement [text]="announcementText" [textColour]="textColour" [backgroundColour]="backgroundColour" ></app-announcement>
