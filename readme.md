@@ -18,8 +18,8 @@ The elements container project has had it's `angular.json` file modified to incl
 	- Add the following code to the AppModule class
 
 <pre><code>constructor(injector: Injector) {
-  const  announcementComponent = createCustomElement(YOUR_COMPONENT, {injector});
-  customElements.define('app-PROJECT_NAME', YOUR_COMPONENT);
+  const component = createCustomElement(YOUR_COMPONENT, {injector});
+  customElements.define('app-PROJECT_NAME', component);
 }
 
 ngDoBootstrap() { }</code></pre>
