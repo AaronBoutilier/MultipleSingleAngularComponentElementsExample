@@ -52,9 +52,8 @@ not IE 9-11 # For IE 9-11 support, remove 'not'.</code></pre>
   dist/PROJECT_NAME/main.js \
   dist/PROJECT_NAME/runtime.js \
   dist/PROJECT_NAME/polyfills.js \
-  dist/PROJECT_NAME/vendor.js \
   > dist/agi-PROJECT_NAME.js
 </code></pre>
-8. Finally, update the `package.json` file's build script to the following `ng build && sh concat-build.sh`
+8. Finally, update the `package.json` file's build script to the following `ng build --prod --output-hashing=none && sh concat-build.sh`
 
 Now to use this element, run the `npm run build` command and look in the dist folder for your element js file. Include this file in any html page and use it as if it were an HTML tag.
